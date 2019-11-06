@@ -42,6 +42,7 @@ app.use('/', routes.main);
 
 async function start() {
   try {
+    logger.info('Try to connect to mongo');
     await connectDb();
     const { User } = models;
     await User.deleteMany({});
@@ -57,18 +58,3 @@ async function start() {
 }
 
 start();
-
-// connectDb().then(async () => {
-//   if (eraseDatabaseOnSync) {
-//     await Promise.all([
-//       models.User.deleteMany({}),
-//       models.Message.deleteMany({}),
-//     ]);
-//
-//     createUsersWithMessages();
-//   }
-//
-//   app.listen(process.env.PORT, () =>
-//     console.log(`Example app listening on port ${process.env.PORT}!`),
-//   );
-// });
