@@ -1,9 +1,13 @@
 # distance-learning-service
 
-## Setup
+## Environment
 
-git clone
+Webstorm or vscode
 
-npm i 
+## What are you need to run:
 
-npm start
+- Install node.js v8 or higher
+- Install mongodb
+- navigate to project directory
+- execute `npm i`
+- execute `npm start`
